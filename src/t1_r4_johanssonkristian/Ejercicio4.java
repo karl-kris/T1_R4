@@ -39,22 +39,22 @@ public class Ejercicio4 {
                     
                     switch(num){
                         case 1:
-                            
+                            insertarAlumno(conexion.getConectar());
                             break;
                         case 2:
-                            
+                            insertarCurso(conexion.getConectar());
                             break;
                         case 3:
-                            
+                            insertarMatricula(conexion.getConectar());
                             break;
                         case 4:
-                            
+                            mostrarAlumnos(conexion.getConectar());
                             break;
                         case 5:
-                            
+                            mostrarCursos(conexion.getConectar());
                             break;
                         case 6:
-                            
+                            mostrarMatriculas(conexion.getConectar());
                             break;
                     }
 
@@ -79,7 +79,7 @@ public class Ejercicio4 {
         catch (SQLException e) {System.out.println("\nNO SE HA PODIDO CONECTAR A LA BASE DE DATOS.\nCOMPRUEBA TU CONEXIÓN.\n");}
     }
     
-    private void insertarAlumno(Connection conexion){
+    private static void insertarAlumno(Connection conexion){
         try
         {
             String sql = "INSERT INTO alumno VALUES (?,?,?,?,?,?,?,?)"; 
@@ -126,7 +126,7 @@ public class Ejercicio4 {
         catch (SQLException e) {System.out.println("\nHA HABIDO UN ERROR EN LA INSERCIÓN.\n");}
     }
     
-    private void insertarCurso(Connection conexion){
+    private static void insertarCurso(Connection conexion){
         try
             {
             String sql = "INSERT INTO curso VALUES (?,?,?,?,?)"; 
@@ -162,7 +162,7 @@ public class Ejercicio4 {
         catch (SQLException e) {System.out.println("\nHA HABIDO UN ERROR EN LA INSERCIÓN.\n");}
     }
     
-    private void insertarMatricula(Connection conexion){
+    private static void insertarMatricula(Connection conexion){
         try
             {
             String sql = "INSERT INTO matricula VALUES (?,?,?,?,?)"; 
@@ -194,7 +194,7 @@ public class Ejercicio4 {
         catch (SQLException e) {System.out.println("\nHA HABIDO UN ERROR EN LA INSERCIÓN.\n");}
     }
     
-    private void mostrarAlumnos(Connection conexion){
+    private static void mostrarAlumnos(Connection conexion){
         try
             {
             Statement sentencia = conexion.createStatement();
@@ -209,7 +209,7 @@ public class Ejercicio4 {
         catch (SQLException e) {System.out.println("\nNO SE HA PODIDO CONECTAR A LA BASE DE DATOS.\nCOMPRUEBA TU CONEXIÓN.\n");}
     }
     
-    private void mostrarCursos(Connection conexion){
+    private static void mostrarCursos(Connection conexion){
         try
             {
             Statement sentencia = conexion.createStatement();
@@ -223,7 +223,7 @@ public class Ejercicio4 {
         catch (SQLException e) {System.out.println("\nNO SE HA PODIDO CONECTAR A LA BASE DE DATOS.\nCOMPRUEBA TU CONEXIÓN.\n");}
     }
     
-    private void mostrarMatriculas(Connection conexion){
+    private static void mostrarMatriculas(Connection conexion){
         try
             {
             Statement sentencia = conexion.createStatement();
