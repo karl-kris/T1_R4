@@ -205,6 +205,7 @@ public class Ejercicio4 {
                 + " ------- " + resul.getString("nombre") + " ------- " + resul.getString("apellidos") + " ------- " + resul.getString("direccion")
                  + " ------- " + resul.getString("localidad") + " ------- " + resul.getString("f_nac") + " ------- " + resul.getInt("tfno"));
             }
+            sentencia.close();
         }
         catch (SQLException e) {System.out.println("\nNO SE HA PODIDO CONECTAR A LA BASE DE DATOS.\nCOMPRUEBA TU CONEXIÓN.\n");}
     }
@@ -219,6 +220,7 @@ public class Ejercicio4 {
                 System.out.println(resul.getInt("cod_curso") + " ------- " + resul.getString("nombre")
                 + " ------- " + resul.getInt("horas") + " ------- " + resul.getString("turno") + " ------- " + resul.getString("mes_comienzo"));
             }
+            sentencia.close();
         }
         catch (SQLException e) {System.out.println("\nNO SE HA PODIDO CONECTAR A LA BASE DE DATOS.\nCOMPRUEBA TU CONEXIÓN.\n");}
     }
@@ -234,6 +236,7 @@ public class Ejercicio4 {
             {
                 System.out.println("Nombre del curso: "+ resul.getString(1) + " -------> Alumno:  " + resul.getString(2));
             }
+            sentencia.close();
         }
         catch (SQLException e) {System.out.println("\nNO SE HA PODIDO CONECTAR A LA BASE DE DATOS.\nCOMPRUEBA TU CONEXIÓN.\n");}
     }
