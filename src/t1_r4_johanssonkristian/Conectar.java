@@ -25,7 +25,7 @@ public class Conectar {
             //Cargar el driver
             Class.forName("com.mysql.cj.jdbc.Driver");
             //Establecemos la conexión con la base de datos
-            this.conexion = DriverManager.getConnection
+            conexion = DriverManager.getConnection
             (servidor,usuario,clave);
             
             System.out.println("Conexión exitosa.");
@@ -37,7 +37,7 @@ public class Conectar {
     }
     
     public Connection getConectar(){
-        return this.conexion;
+        return conexion;
     }
     
 }
